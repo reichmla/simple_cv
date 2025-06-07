@@ -1,1 +1,1 @@
-# reichmann-cv
+# simple-cv
