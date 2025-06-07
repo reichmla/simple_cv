@@ -1,0 +1,79 @@
+%%%%%%%%%%%%%%%
+% This CV example/template is based on the CV template provided by LianTze Lim (liantze@gmail.com) 
+% and is edited to my own requirements.
+% The original template is available under: https://www.overleaf.com/latex/templates/a-customised-curve-cv/mvmbhkwsnmwv
+% Published under https://creativecommons.org/licenses/by/4.0/deed.de
+
+% Luca Reichmann
+% 07 Jun, 2025
+%
+\documentclass[a4paper,skipsamekey,11pt,english]{curve}
+
+% Default biblatex style used for the publication list is APA6. If you wish to use a different style or pass other options to biblatex you can change them here. 
+\PassOptionsToPackage{style=ieee,sorting=ydnt,uniquename=init,defernumbers=true}{biblatex}
+
+% Most commands and style definitions are in settings.sty.
+\usepackage{settings}
+
+% Change the fonts if you want
+\usepackage[default]{lato}
+\usepackage[T1]{fontenc}
+
+\newcommand{\description}{}
+\usepackage{enumitem}
+\usepackage{pdfpages}
+
+\usepackage{tcolorbox}
+
+% Change the page margins if you want
+\geometry{left=0.75cm,right=0.75cm,top=0.75cm, bottom=0.75cm}
+
+% Change the colours if you want
+\definecolor{BackgroundColor}{HTML}{f2f3f5}
+\definecolor{TextColor}{HTML}{6C6C6C}
+\definecolor{RubricTextColor}{HTML}{000080}
+
+%% Photo is only shown if "fullonly" is included
+\includecomment{fullonly}
+
+\let\olditem\item\renewcommand{\item}[1][black]{\color{#1}\olditem}
+\let\oldhref\href\renewcommand{\href}[1][black]{\color{#1}\oldhref}
+
+\setlist[itemize]{noitemsep, nosep, topsep=6pt, partopsep=0pt, parsep=2pt, itemsep=0pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\leftheader{%
+	\faLinkedin {\href{https://www.linkedin.com/in/profile/}{in/profile}} \hfill \faEnvelope[regular] {\href{mailto:jane@doe.com}{jane@doe.com}} \hfill \faIcon{mobile-alt} {\href{tel:+123456789}{+123456789}} \par
+	 \vspace{0.4cm}
+  {\LARGE\bfseries\sffamily Bunny Doe} \par
+   \vspace{0.05cm}
+
+ \vspace{0.2cm}
+\textcolor{TextColor}{orem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.}
+}
+\headerscale{0.95}
+
+% Creates the "profile picture"
+\rightheader{~}
+\begin{fullonly}
+	\photo[r]{img/bnuyy}
+	\photoscale{0.17}
+\end{fullonly}
+
+\title{Curriculum Vitae}
+
+\begin{document}
+\begin{tcolorbox}[colback=BackgroundColor, colframe=white, width=\textwidth+1.5cm, enlarge left by=-0.75cm, enlarge right by=-0.75cm, enlarge top by=-0.75cm, left=0.75cm, right=0.75cm, top=0.5cm, bottom=0.2cm]
+	\makeheaders[c]
+\end{tcolorbox}
+
+
+\makerubric{sections/personal}
+\makerubric{sections/education}
+\makerubric{sections/employment}
+\makerubric{sections/certifications}
+\makerubric{sections/skills}
+
+\end{document}
