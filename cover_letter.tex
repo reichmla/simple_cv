@@ -1,0 +1,171 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Lined Cover Letter
+% LaTeX Template
+% Version 3.0 (February 14, 2023)
+%
+% This template originates from:
+% https://www.LaTeXTemplates.com
+%
+% Author:
+% Vel (vel@LaTeXTemplates.com)
+%
+% License:
+% CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[
+11pt, % Default font size
+]{letter}
+
+\usepackage{graphicx} % Required for including images
+
+%----------------------------------------------------------------------------------------
+%	MARGINS
+%----------------------------------------------------------------------------------------
+
+% \geometry{left=0.5cm,right=0.5cm,top=0.0cm,bottom=0.0cm}
+
+\usepackage[
+a4paper, % Paper size, use letterpaper for US letter paper
+top=2cm, % Top margin
+bottom=2.5cm, % Bottom margin
+left=3cm, % Left margin
+right=3cm, % Right margin
+headsep=0.8cm, % Space from the top margin to the baseline of the header
+footskip=1.2cm, % Space from the bottom margin to the baseline of the footer
+%showframe % Uncomment to show frames around the margins for debugging purposes
+]{geometry}
+
+\setlength{\parindent}{0pt} % Paragraph indentation
+\setlength{\parskip}{1em} % Vertical space between paragraphs
+
+%----------------------------------------------------------------------------------------
+%	FONTS
+%----------------------------------------------------------------------------------------
+
+\usepackage[utf8]{inputenc} % Required for inputting international characters
+\usepackage[T1]{fontenc} % Output font encoding for international characters
+
+\usepackage{XCharter} % Use the XCharter fonts
+\usepackage{xcolor}
+
+\usepackage[default]{sourcesanspro}
+\rubricfont{\color{RubricTextColor}\Large\sffamily}
+
+\definecolor{RubricTextColor}{HTML}{000080}
+
+%----------------------------------------------------------------------------------------
+%	HEADERS AND FOOTERS
+%----------------------------------------------------------------------------------------
+
+\usepackage{fancyhdr} % Required for customizing headers and footers
+
+\fancypagestyle{firstpage}{%
+	\fancyhf{} % Clear default headers/footers
+	\renewcommand{\headrulewidth}{0pt} % No header rule
+	\renewcommand{\footrulewidth}{0pt} % Footer rule thickness
+	\renewcommand{\footrule}{{\color{RubricTextColor}\hrule width\headwidth height\footrulewidth}} % Change 'blue' to any color
+}
+
+\fancypagestyle{subsequentpages}{%
+	\fancyhf{} % Clear default headers/footers
+	\renewcommand{\headrulewidth}{0pt} % Header rule thickness
+	\renewcommand{\headrule}{{\color{RubricTextColor}\hrule width\headwidth height\headrulewidth}} % Change 'blue' to any color
+	\renewcommand{\footrulewidth}{1pt} % Footer rule thickness
+	\renewcommand{\footrule}{{\color{RubricTextColor}\hrule width\headwidth height\footrulewidth}} % Change 'blue' to any color
+}
+
+\AtBeginDocument{\thispagestyle{firstpage}} % Use the first page headers/footers style on the first page
+\pagestyle{subsequentpages} % Use the subsequent pages headers/footers style on subsequent pages
+
+\usepackage{ragged2e}
+\justifying
+
+\usepackage[none]{hyphenat}
+\sloppy
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+	
+	%----------------------------------------------------------------------------------------
+	%	FIRST PAGE HEADER
+	%----------------------------------------------------------------------------------------
+	
+	
+	\medskip % Vertical whitespace
+	
+	%----------------------------------------------------------------------------------------
+	%	YOUR NAME AND CONTACT INFORMATION
+	%----------------------------------------------------------------------------------------
+	
+	\begingroup
+	\raggedleft % Right align text
+	% \small % Font size
+	Hoppel Hare \\ % Your name
+	Carrot Lane 42 \\ % Your address
+	12345 Bunnyville \\
+	+1 555 123 4567 \\ % Your phone number
+	hoppel@bunnymail.com\\ % Your email address
+	\endgroup
+	
+	%----------------------------------------------------------------------------------------
+	%	ADDRESSEE AND GREETING
+	%----------------------------------------------------------------------------------------
+	
+	\bigskip
+	
+	\bigskip % Vertical whitespace
+	
+	\textcolor{RubricTextColor}{\textbf{Application for Tunnel Digging Internship at CarrotCorp}} \\
+	\textcolor{RubricTextColor}{\rule{\linewidth}{1pt}} % Horizontal rule
+	
+	\medskip % Vertical whitespace
+	
+	Dear CarrotCorp Team,
+	
+	\smallskip % Vertical whitespace
+	
+	%----------------------------------------------------------------------------------------
+	%	LETTER CONTENT
+	%----------------------------------------------------------------------------------------
+	
+	As an enthusiastic and highly motivated rabbit with a strong passion for efficient digging and user-friendly burrow design, I am thrilled to hop forward and apply for your Software Development Internship.
+	
+	Throughout my time at Hare University, where I am pursuing a Master’s in Tunnel Engineering and Data Crunching, I have built a solid foundation in collaborative digging algorithms, patch optimization, and scalable carrot storage solutions. I’ve contributed to several open-source warren management tools, including BurrowJS and LettuceSync, and recently published a preprint on “Asynchronous Thump Signaling for Distributed Rabbit Networks.”
+	
+	I was particularly excited to discover that CarrotCorp values curiosity, rapid iteration, and nibble-sized user feedback—values I hold close to my fluffy heart. Whether it’s designing intuitive interfaces for hedgehogs or optimizing backend systems to withstand squirrel-related latency, I’m eager to bring my paws-on experience and twitchy attention to detail to your team.
+	
+	Thank you for considering my application. I would love the opportunity to discuss how my background in burrow systems and my relentless appetite for innovation could benefit CarrotCorp. I am available for interviews via thump, chirp, or email at your convenience.
+	
+	\smallskip
+	
+	With warmest regards and a soft nose wiggle,
+	
+	%	Put your signature here
+	%	\includegraphics[width=0.3\textwidth, angle=-4]{bnuyy_signature.png} % Right-aligned logo
+	
+	Flopsy Whiskerfoot
+	
+	%----------------------------------------------------------------------------------------
+	
+	%	CONTENTS
+	\newpage
+	
+	\textcolor{RubricTextColor}{\textbf{Anhänge}} \\
+	\textcolor{RubricTextColor}{\rule{\linewidth}{1pt}} % Horizontal rule
+	
+	\begin{itemize}
+		\item Resume of Hoppel Hare
+		\item Letter of recommendation from Mrs. Mümmel
+		\item Certificate from Hare University
+		\item Proof of participation in the Carrot Workshop
+	\end{itemize}
+	
+	
+\end{document}
